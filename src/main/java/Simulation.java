@@ -45,8 +45,8 @@ public class Simulation {
         String allBins = "";
         for (int i = numberOfDice; i < numberOfDice + results.size(); i++) {
             Integer binTally = results.get(i);
-            Float percent = (float) binTally / numberOfTosses;
-            String toAdd = String.format("%2d %9d: %1.2f\n", i, binTally, percent);
+            Float percent = 100 * (float) binTally / numberOfTosses;
+            String toAdd = String.format("%2d %9d: %2.0f%%\n", i, binTally, percent);
             allBins = allBins + toAdd;
         }
         System.out.print(allBins);
