@@ -13,14 +13,6 @@ public class Dice {
     return sum;
     }
 
-    public static Integer getNumberOfDice() {
-        return numberOfDice;
-    }
-
-    public void setNumberOfDice(Integer numberOfDice) {
-        this.numberOfDice = numberOfDice;
-    }
-
     public static double randomDieToss() {
         return Math.floor((Math.random() * 60)/10) + 1;
     }
