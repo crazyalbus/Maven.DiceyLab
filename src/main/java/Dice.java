@@ -1,15 +1,24 @@
 public class Dice {
-    private Integer numberOfDice;
+    private static Integer numberOfDice;
 
     public Dice(Integer numberOfDice) {
         this.numberOfDice = numberOfDice;
     }
 
     public static Integer tossAndSum(Integer numberOfDice) {
-        Integer die1 = (int) Dice.randomDieToss();
-        Integer die2 = (int) Dice.randomDieToss();
+        Integer sum = 0;
+        for (int i = 1; i <= numberOfDice; i++) {
+            sum = sum + (int) Dice.randomDieToss();
+        }
+    return sum;
+    }
 
-    return die1 + die2;
+    public static Integer getNumberOfDice() {
+        return numberOfDice;
+    }
+
+    public void setNumberOfDice(Integer numberOfDice) {
+        this.numberOfDice = numberOfDice;
     }
 
     public static double randomDieToss() {

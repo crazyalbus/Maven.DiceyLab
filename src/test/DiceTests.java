@@ -28,8 +28,22 @@ public class DiceTests {
         Dice newDice = new Dice(numberOfDice);
 
         //Then
-        Assert.assertTrue(Dice.tossAndSum(numberOfDice) <= 12);
-        Assert.assertTrue(Dice.tossAndSum(numberOfDice) >=2);
+        Assert.assertTrue(Dice.tossAndSum(numberOfDice) <= numberOfDice * 6);
+        Assert.assertTrue(Dice.tossAndSum(numberOfDice) >= numberOfDice);
+    }
+
+    @Test
+    public void testDiceTossAndSum2() {
+
+        //Given
+        Integer numberOfDice = 4;
+
+        //When
+        Dice newDice = new Dice(numberOfDice);
+
+        //Then
+        Assert.assertTrue(Dice.tossAndSum(numberOfDice) <= numberOfDice * 6);
+        Assert.assertTrue(Dice.tossAndSum(numberOfDice) >= numberOfDice);
     }
 
 
